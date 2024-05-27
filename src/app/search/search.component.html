@@ -1,10 +1,21 @@
-<div class="search-bar">
+<div class="search-bar form-group">
   <mat-form-field class="search-input" appearance="outline">
+    <mat-label class="label-search"
+      ><mat-icon class="search-icon">search</mat-icon>Search</mat-label
+    >
 
-    <mat-label class="label-search"><mat-icon class="search-icon">search</mat-icon>Search</mat-label>
-
-    <input matInput #message placeholder="Busque um perfil no GitHub">
+    <input
+      matInput
+      type="text"
+      class="form-control"
+      id="perfil"
+      name="perfil"
+      #message
+      placeholder="Busque um perfil no GitHub"
+      [(ngModel)]="perfil"
+    />
   </mat-form-field>
-  <button class="btn-search" mat-flat-button>Search</button>
+  <button type="submit" class="btn-search" mat-flat-button (click)="search()">
+    Search
+  </button>
 </div>
-
